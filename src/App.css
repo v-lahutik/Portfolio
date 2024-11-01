@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+/*font styles */
+.spicy-rice-regular {
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+  }
+  
+  /* Main container that wraps everything */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    background: rgb(235,232,219);
+    background: radial-gradient(circle, rgba(235,232,219,1) 0%, rgba(203,233,187,1) 100%);
+  }
+  
+  /* Header stays at the top */
+  header {
+    flex-shrink: 0;
+    
+  }
+  
+  /* Main content expands to fill available space */
+  .main-content {
+    flex-grow: 1;
+    padding: 20px; 
+    margin: 0px 300px;
+    border: 2px solid #2e2673;
+  }
+  
+  /* Footer stays at the bottom */
+  footer {
+    flex-shrink: 0;
+  }
+  
+/*for the welcome message*/
+  .word {
+    display: inline-block; /* Inline-block to animate words individually */
+    margin: 0 0.2rem; /* Small margin between words */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #025A4E;
+  }
+  
