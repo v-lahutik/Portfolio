@@ -19,7 +19,7 @@ const Footer = () => {
             <FaGithub className="contact-icon" />
           </FooterSocialLink>
           <FooterSocialLink
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/viktorija-lahutik/"
             target="_blank"
            
           >

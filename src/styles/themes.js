@@ -11,6 +11,7 @@ export const theme = {
     secondaryBg: "#233831",
     primaryText: "#025A4E",
     secondaryText: "#8FDCC2",
+    tertiaryText: "#DFE8CF",
 
     hoverBg: "#eaeaea",
     border: "#ddd",
