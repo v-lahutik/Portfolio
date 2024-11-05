@@ -6,20 +6,20 @@ import {
   LogoWrapper,
   SkillName,
 } from "./SkillsStyles.js";
-import react from "../../assets/react.png";
-import javascript from "../../assets/javascript.png";
-import typescript from "../../assets/typescript.png";
-import html from "../../assets/html.png";
-import css from "../../assets/css.png";
-import node from "../../assets/node-js.png";
-import express from "../../assets/express.png";
-import mongodb from "../../assets/mongodb.png";
-import sass from "../../assets/sass.png";
-import bootstrap from "../../assets/bootstrap.png";
-import tailwind from "../../assets/tailwind.png";
-import materialui from "../../assets/material-ui.png";
-import postman from "../../assets/postman.png";
-import git from "../../assets/git.png";
+import react from "../../assets/technologyLogos/react.png";
+import javascript from "../../assets/technologyLogos/javascript.png";
+import typescript from "../../assets/technologyLogos/typescript.png";
+import html from "../../assets/technologyLogos/html.png";
+import css from "../../assets/technologyLogos/css.png";
+import node from "../../assets/technologyLogos/node.png";
+import express from "../../assets/technologyLogos/express-js.png";
+import mongodb from "../../assets/technologyLogos/mongoDB.png";
+import sass from "../../assets/technologyLogos/sass.png";
+import bootstrap from "../../assets/technologyLogos/bootstrap.png";
+import tailwind from "../../assets/technologyLogos/tailwind.png";
+import materialui from "../../assets/technologyLogos/material-ui.png";
+import postman from "../../assets/technologyLogos/postman.png";
+import git from "../../assets/technologyLogos/git.png";
 
 function Skills() {
 
@@ -29,14 +29,14 @@ function Skills() {
     { name: "TypeScript", logo: typescript },
     { name: "HTML", logo: html },
     { name: "CSS", logo: css },
+    { name: "Git", logo: git },
     { name: "Node.js", logo: node },
-    { name: "Express", logo: express },
+    { name: "Express.js", logo: express },
     { name: "MongoDB", logo: mongodb },
     { name: "Postman", logo: postman },
-    { name: "Git", logo: git },
     { name: "Sass", logo: sass },
     { name: "Bootstrap", logo: bootstrap },
-    { name: "Tailwind CSS", logo: tailwind },
+    { name: "Tailwind", logo: tailwind },
     { name: "Material-UI", logo: materialui },
   ];
   return (

@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 /*font styles */
 .spicy-rice-regular {
@@ -52,3 +53,24 @@
     color: #025A4E;
   }
   
+  /* Adjust styles for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .main-content {
+    margin: 0px 100px; /* Reduce margins */
+  }
+}
+
+/* Adjust styles for mobile screens */
+@media (max-width: 768px) {
+  .main-content {
+    margin: 0px 20px; /* Further reduce margins for small screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  /* Make the sections stack more effectively */
+  header, footer {
+    text-align: center; /* Center-align header and footer content */
+  }
+}
+
+

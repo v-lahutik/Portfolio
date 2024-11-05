@@ -25,7 +25,7 @@ const Header = () => {
           <NavLink href="#hero">Home</NavLink> {/* Updated href to link to section ID */}
         </NavItem>
         <NavItem>
-          <NavLink href="#skills">Skills</NavLink> {/* Link to Skills section */}
+          <NavLink href="#experience">Experience</NavLink> {/* Link to Skills section */}
         </NavItem>
         <NavItem>
           <NavLink href="#projects">Projects</NavLink> {/* Link to Projects section */}

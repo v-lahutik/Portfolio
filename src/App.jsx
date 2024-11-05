@@ -6,6 +6,7 @@ import Hero from "./components/HeroSection/Hero";
 import Projects from "./components/Projects/Projects.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import Skills from "./components/Skills/Skills.jsx";
+import Experience from "./components/Experience/Experience.jsx";
 
 
 const App = () => {
@@ -19,7 +20,9 @@ const App = () => {
         <section id="skills">
           <Skills />
         </section>
-        
+        <section id="experience">
+          <Experience />
+        </section>
         <section id="projects">
           <Projects />
         </section>

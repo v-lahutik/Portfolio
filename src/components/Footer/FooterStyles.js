@@ -5,7 +5,7 @@ export const FooterContainer = styled.footer`
   height: 5rem;
   background-color: ${theme.colors.secondaryBg};
   color: ${theme.colors.primaryText};
-  width: 100vw;
+
   ${theme.alignment.flexCenter};
   flex-direction: column;
 `;

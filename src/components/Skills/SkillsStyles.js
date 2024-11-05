@@ -19,11 +19,11 @@ export const SkillsContainer = styled.section`
   gap: ${theme.spacing.large};
   overflow: hidden; 
   position: relative; 
+  margin-top: 8vh;
 `;
 
 // Wrapper for each logo and skill name
 export const AnimationWrapper = styled.div`
-  
   width: 100%; 
   height: 300px; 
   display: flex;
@@ -38,9 +38,12 @@ export const AnimationWrapper = styled.div`
 // Styled component for the logo image
 export const LogoWrapper = styled.div`
   width: 250px;
-  height: 150px;
-  
+  height: 130px;
   background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 0 ${theme.spacing.small};
   margin: 0 ${theme.spacing.small};
   
