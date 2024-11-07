@@ -4,10 +4,10 @@ import {
   HeroContainer,
   CVButton,
   ContentWrapper,
-  ProfileImage,
-  Tagline
+  Tagline,
+  ArrowIcon
 } from "./HeroStyles";
-
+import { IoIosArrowDown } from "react-icons/io";
 
 function Hero() {
   return (
@@ -15,21 +15,27 @@ function Hero() {
       <HeroContainer>
         <ContentWrapper>
           <WelcomeMessage />
-          <ProfileImage src="/profile.jpg" alt="Profile Picture" />
-        </ContentWrapper>
-        
         <Tagline>
-  Transforming ideas into beautiful, functional websites is my passion. I focus on delivering high-quality, impactful web applications that meet both user needs and business goals.
-</Tagline>
-          <CVButton
-            href="/Viktorija_Lahutik_CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer" // Security measure
-          >
-            View My CV
-          </CVButton>
+          Transforming ideas into beautiful, functional websites is my passion.
+          I focus on delivering high-quality, impactful web applications that
+          meet both user needs and business goals.
+        </Tagline>
+        <CVButton
+          href="/Viktorija_Lahutik_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer" // Security measure
+        >
+          View My CV
+        </CVButton>
+         </ContentWrapper>
         
+     
+        <ArrowIcon href="#aboutMe">
+          <IoIosArrowDown />
+          </ArrowIcon>
+         
       </HeroContainer>
+     
     </>
   );
 }

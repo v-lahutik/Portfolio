@@ -1,5 +1,4 @@
-
-import { Nav, NavList, NavItem, NavLink } from './HeaderStyles';
+import { HeaderContainer, Nav, NavList, NavItem, NavLink } from './HeaderStyles';
 import React, { useEffect, useState } from 'react';
 
 const Header = () => {
@@ -7,7 +6,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+      if (window.scrollY > 50) {
         setScrolling(true);
       } else {
         setScrolling(false);
@@ -19,22 +18,24 @@ const Header = () => {
   }, []);
 
   return (
-    <Nav style={{ backgroundColor: scrolling ? 'rgba(0, 0, 0, 0.5)' : 'transparent' }}>
+    <HeaderContainer>
+    <Nav scrolling={scrolling}>
       <NavList>
         <NavItem>
-          <NavLink href="#hero">Home</NavLink> {/* Updated href to link to section ID */}
+          <NavLink href="#hero">Home</NavLink> 
         </NavItem>
         <NavItem>
-          <NavLink href="#aboutMe">About Me</NavLink> {/* Link to Skills section */}
+          <NavLink href="#aboutMe">About Me</NavLink> 
         </NavItem>
         <NavItem>
-          <NavLink href="#projects">Projects</NavLink> {/* Link to Projects section */}
+          <NavLink href="#projects">Projects</NavLink> 
         </NavItem>
         <NavItem>
-          <NavLink href="#contact">Contact</NavLink> {/* Link to Contact section */}
+          <NavLink href="#contact">Contact</NavLink> 
         </NavItem>
       </NavList>
     </Nav>
+    </HeaderContainer>
   );
 };
 

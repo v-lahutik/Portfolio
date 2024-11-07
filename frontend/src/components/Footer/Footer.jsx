@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <FooterContainer>
     
-          <FooterText>© 2024 Viktorija Lahutik. All rights reserved.</FooterText>
+          <FooterText>"Designed and Coded with ❤️ by Viktorija Lahutik "</FooterText>
        
         <FooterSocials className="footer-socials">
           <FooterSocialLink

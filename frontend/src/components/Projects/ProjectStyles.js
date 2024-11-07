@@ -1,82 +1,111 @@
 import styled from 'styled-components';
 import { theme } from '../../GlobalStyles/themes';
 
-
 export const ProjectsContainer = styled.div`
-  padding: 40px;
-  display: flex;
-
-  align-items: center;
-`;
-
-
-// Container for individual project cards
-export const ProjectCard = styled.div`
-  position: relative;
-  background-color: #ffffff; /* White background for cards */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  padding: 0; /* No padding to avoid extra space around the image */
-  width: 400px; /* Increased width for larger cards */
-  transition: transform 0.2s;
-
-  &:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-`;
-
-// Image of the project
-export const ProjectImage = styled.img`
   width: 100%;
-  height: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 `;
 
-// Overlay for the project description
-export const ProjectOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-  padding: 20px;
+export const ProjectCard = styled.div`
+  width: 70vw;
+  position: relative;
   border-radius: 10px;
+  margin: 20px;
+border-bottom: 2px solid #FFC475;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: transform 0.2s;
+  flex-wrap: wrap;
+  
 
-  ${ProjectCard}:hover & {
-    opacity: 1; /* Show overlay on hover */
+  /* Reverse layout if 'reverse' prop is true */
+  flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+
+  @media (max-width: 768px) {
+    width: 90vw; /* Adjust for smaller screens */
+    flex-direction: column; /* Stack the elements vertically */
   }
 `;
 
-// Title for each project card
-export const ProjectTitle = styled.h3`
-  font-size: 1.5em;
-  color: #FFC475; /* Use a color that matches your theme */
-  margin-bottom: 10px;
+export const ProjectImage = styled.div`
+  width: 50%;
+  height: auto; /* Remove fixed height */
+  border-radius: 10px 0 0 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+  @media (max-width: 768px) {
+    width: 100%; /* Make the image take full width on smaller screens */
+    height: auto; /* Allow the image to scale with the content */
+  }
 `;
 
-// Button to view project details or links
-export const ViewProjectButton = styled.a`
+export const ProjectInfo = styled.div`
+  width: 50%;
+
+  padding: 0 20px 0 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    p{
+      font-size: 1.2em;
+     
+    }
+    @media (max-width: 768px) {
+      width: 100%; /* Make the project info take full width */
+      padding: 0 20px ; /* Adjust padding */
+      gap: 20px;
+    }
+`;
+
+export const ProjectTitle = styled.h3`
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #FFC475;
+  margin-top: 3rem;
+  @media (max-width: 768px) {
+    margin-top: 0; 
+  }
+`;
+
+export const ProjectButton = styled.a`
+  font-size: 1.2em;
   display: inline-block;
   margin-top: 10px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #FFF45F; /* Button background color */
-  color: #333; /* Button text color */
+  margin-bottom: 10px;
+  padding: 20px 0;
+  color: #333;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: #FFC475; /* Change color on hover */
+    text-decoration: underline;
   }
+`;
+
+export const SkillsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  `;
+
+export const Skills = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  
+  border: 2px solid #FFC475;
+  border-radius: 50px;
 `;

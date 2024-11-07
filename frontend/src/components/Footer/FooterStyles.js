@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
 
 export const FooterText = styled.p`
   color: ${theme.colors.tertiaryText};
-  padding-top: 0 0 10;
+  padding-top: 0 0 30;
 
 `;
 
@@ -25,4 +25,5 @@ export const FooterSocialLink = styled.a`
   font-size: 2rem;
   color: ${theme.colors.tertiaryText};
   text-decoration: none;
+ margin-top: 8px;
 `;

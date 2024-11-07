@@ -2,34 +2,34 @@ import styled from 'styled-components';
 import { theme } from '../../GlobalStyles/themes';
 
 export const HeroContainer = styled.section`
-padding-top: 10vh;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-bottom: 10vh; 
+
+/* Relative positioning to allow absolute positioning of the arrow */
+position: relative;
 `;
 
 export const ContentWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Space out the content */
-  gap: 20px; /* Add some space between WelcomeMessage and the image */
+flex: 1;
+max-width: 40%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 
-  @media (max-width: 768px) {
-    /* For screens smaller than 768px */
-    flex-direction: column; /* Stack the elements vertically */
-    align-items: center; /* Center items horizontally */
-    gap: 10px; /* Adjust gap for better spacing on mobile */
+  gap: 20px;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    justify-content: center; /* Center content horizontally for medium screens */
+    gap: 15px; /* Adjust gap if necessary */
   }
-`;
 
-
-export const ProfileImage = styled.img`
-  width: 150px; /* Adjust the size as needed */
-  height: 150px; /* Adjust the size as needed */
-  border-radius: 50%; /* Make the image circular */
-  object-fit: cover; /* Ensure the image covers the container without distortion */
-  
   @media (max-width: 768px) {
-    /* Adjust size for mobile view if needed */
-    width: 120px;
-    height: 120px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 `;
 
@@ -39,12 +39,12 @@ export const Tagline = styled.p`
   margin-top: 10px;
   line-height: 1.6;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  
 `;
 
 // Define the styled component
 export const CVButton= styled.a`
+width: 200px;
 position: relative;
 overflow: hidden;
 margin-top: 20px;
@@ -106,4 +106,19 @@ z-index: 1; /* Ensure the button is above other components */
     left: 100%; /* Move the sheen to the right side */
   }
 }
+`;
+
+
+export const ArrowIcon = styled.a`
+  position: absolute;
+  bottom: 3rem; /* Position it a bit above the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: ${theme.colors.primaryText};
+  cursor: pointer;
+
+  &:hover {
+    color: #555;
+  }
 `;
