@@ -1,10 +1,9 @@
 // src/components/ContactForm.js
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import {theme} from '../../GlobalStyles/themes.js';
 
 export const FormContainer = styled.div`
-border: 1px solid green;
+border: 1px solid black;
  width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -18,13 +17,20 @@ export const Form=styled.form`
   flex-direction: column;
   width: 100%;
   padding: 10px;
+  
 `;
-
+export const Label = styled.label`
+  font-size: 1rem;
+  font-weight: 600;
+  color: ${({ theme }) => theme.primaryText};
+  margin-left: 5px;
+`;
 export const Input = styled.input`
-  margin: 10px 0;
+  margin: 8px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: ${({ theme }) => theme.secondaryBg};
 `;
 
 export const TextArea = styled.textarea`
@@ -32,24 +38,25 @@ export const TextArea = styled.textarea`
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: ${({ theme }) => theme.secondaryBg};
 `;
 
 export const Button = styled.button`
   padding: 10px;
-  background-color: black;
-  color: white;
+  background-color: ${({ theme }) => theme.primaryText};
+  color: ${({ theme }) => theme.secondaryBg};
   border: none;
   border-radius: 5px;
   cursor: pointer;
   
   &:hover {
-    background-color: #0056b3;
+    background-color: ${({ theme }) => theme.secondaryText};
   }
 `;
 
 export const Message=styled.p`
-  color: white;
-  background-color: green;
+  color: ${({ theme }) => theme.primaryText};
+  background-color: ${({ theme }) => theme.primaryBg};
   margin: 10px 0;
   padding: 10px;
   width: 50%;

@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 /*font styles */
 .spicy-rice-regular {
   font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gloock-regular {
+  font-family: "Gloock", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -13,6 +19,7 @@
 
 html {
   scroll-behavior: smooth; /* Enable smooth scrolling */
+ 
 }
 
 #hero,
@@ -22,18 +29,6 @@ html {
   scroll-margin-top: 120px;
 }
 
-/* Main container that wraps everything */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: rgb(235, 232, 219);
-  background: radial-gradient(
-    circle,
-    rgba(235, 232, 219, 1) 0%,
-    rgba(203, 233, 187, 1) 100%
-  );
-}
 
 /* Header stays at the top */
 header {
@@ -47,6 +42,8 @@ header {
 
   overflow-x: hidden;
   max-width: 100%; 
+  font-family: Georgia, 'Times New Roman', Times, serif
+  
 }
 
 /* Footer stays at the bottom */
@@ -59,7 +56,7 @@ footer {
   display: inline-block; /* Inline-block to animate words individually */
   margin: 0 0.2rem;
   font-weight: bold;
-  color: #025a4e;
+  letter-spacing: .3rem;
 }
 
 

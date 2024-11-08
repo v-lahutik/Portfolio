@@ -87,10 +87,10 @@ const WelcomeMessage = () => {
 
   return (
     <WelcomeContainer>
-      <Header1 className='spicy-rice-regular' ref={headlineRef}>
+      <Header1 className='gloock-regular' ref={headlineRef}>
         Hey!  I’m Viktorija
       </Header1>
-      <Header2 className='spicy-rice-regular' ref={subheadlineRef} >
+      <Header2 className='gloock-regular' ref={subheadlineRef} >
         A  Full-Stack  Developer
       </Header2>
     </WelcomeContainer>

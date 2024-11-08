@@ -6,11 +6,14 @@ import Hero from "./components/HeroSection/Hero";
 import Projects from "./components/Projects/Projects.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import AboutMe from "./components/AboutMe/AboutMe.jsx";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
+import { AppContainer } from "./GlobalStyles/elements";
 
 const App = () => {
   return (
-    <div className="app-container">
+    <ThemeContextProvider>
+    <AppContainer>
       <Header />
       <main className="main-content">
         <section id="hero">
@@ -28,7 +31,8 @@ const App = () => {
         </section>
       </main>
       <Footer />
-    </div>
+    </AppContainer>
+    </ThemeContextProvider>
   );
 };
 

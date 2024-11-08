@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../GlobalStyles/themes';
 
 export const ProjectsContainer = styled.div`
   width: 100%;
@@ -14,9 +13,9 @@ export const ProjectsContainer = styled.div`
 export const ProjectCard = styled.div`
   width: 70vw;
   position: relative;
-  border-radius: 10px;
+ 
   margin: 20px;
-border-bottom: 2px solid #FFC475;
+border-bottom: 2px solid  ${({ theme }) => theme.primaryText};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,9 +26,13 @@ border-bottom: 2px solid #FFC475;
   /* Reverse layout if 'reverse' prop is true */
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
 
-  @media (max-width: 768px) {
+  @media (max-width: 1048px) {
     width: 90vw; /* Adjust for smaller screens */
     flex-direction: column; /* Stack the elements vertically */
+   
+    align-items: center;
+   
+    
   }
 `;
 
@@ -44,7 +47,7 @@ export const ProjectImage = styled.div`
     object-fit: cover;
     border-radius: inherit;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1048px) {
     width: 100%; /* Make the image take full width on smaller screens */
     height: auto; /* Allow the image to scale with the content */
   }
@@ -59,9 +62,15 @@ export const ProjectInfo = styled.div`
   justify-content: space-between;
     p{
       font-size: 1.2em;
+      color: ${({ theme }) => theme.tertiaryText};
      
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1048px) {
+      width: 100%; /* Make the project info take full width */
+      marin: 20px;
+    
+    }
+     @media (max-width: 1048px) {
       width: 100%; /* Make the project info take full width */
       padding: 0 20px ; /* Adjust padding */
       gap: 20px;
@@ -71,7 +80,7 @@ export const ProjectInfo = styled.div`
 export const ProjectTitle = styled.h3`
   text-transform: uppercase;
   font-size: 1.5em;
-  color: #FFC475;
+  color: ${({ theme }) => theme.primaryText};
   margin-top: 3rem;
   @media (max-width: 768px) {
     margin-top: 0; 
@@ -84,11 +93,11 @@ export const ProjectButton = styled.a`
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 20px 0;
-  color: #333;
+  color: ${({ theme }) => theme.primaryText};
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  transition: background-color 0.2s;
+  transition: ${({ theme }) => theme.primaryBg};
 
   &:hover {
     text-decoration: underline;
@@ -105,7 +114,7 @@ export const Skills = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  
-  border: 2px solid #FFC475;
+  color: ${({ theme }) => theme.tertiaryText};
+  border: 2px solid ${({ theme }) => theme.primaryText};
   border-radius: 50px;
 `;

@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  HeaderIcon,
+  HeaderWrapper,
   SectionContainer,
   SectionHeader,
 } from "../../GlobalStyles/elements.js";
@@ -16,6 +18,7 @@ import {
 import FitZone from "../../assets/projectScreenshots/FitZone2.png";
 import CashFlowControl from "../../assets/projectScreenshots/CashFlowControl3.png";
 import BullsAndCows from "../../assets/projectScreenshots/BullsAndCows2.png";
+import laptop from "../../assets/headingIcons/laptop.png";
 
 const Projects = () => {
   // Example projects data
@@ -65,7 +68,11 @@ const Projects = () => {
 
   return (
     <SectionContainer>
-      <SectionHeader>My Projects</SectionHeader>
+      <HeaderWrapper>
+        <SectionHeader className='gloock-regular'>My Projects</SectionHeader>
+    <HeaderIcon src={laptop} alt="laptop icon" />
+      </HeaderWrapper>
+  
       <ProjectsContainer>
         {project.map((project, index) => (
           <ProjectCard key={index} reverse={index % 2 === 1}>

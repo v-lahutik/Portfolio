@@ -4,20 +4,32 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 `;
+export const lightTheme = {
+  primaryBg: "#4B9984", // light green
+  secondaryBg: "#F8F3EA", // Light beige 
+  primaryText: "#025A4E", // Dark green 
+  secondaryText: "#4B9984", // light green
+  tertiaryText: "#gray", // gray
+  //radialGradient: "radial-gradient(circle, #EDE7DE 20%, #CCEDB5 50%, #E0E5B7 80%)",
+ radialGradient: "radial-gradient(circle, #EDE7DE 40%, #CCEDB5 60%, #E0E5B7 100%)",
 
-export const theme = {
-  colors: {
-    primaryBg: "gray",
-    secondaryBg: "#233831",
-    primaryText: "#025A4E",
-    secondaryText: "#8FDCC2",
-    tertiaryText: "#DFE8CF",
+  stars: "white", // White stars for the sparkle effect
+};
+export const darkTheme = {
+  primaryBg: "#1C1C1C", // Dark charcoal/black for a classic dark theme background
+  secondaryBg: "#333333", // Slightly lighter dark gray for secondary elements
+  primaryText: "#A8D5BA", // Soft mint green for text to maintain consistency with the light theme
+  secondaryText: "#4B9984", // Light green for secondary text
+  tertiaryText: "#B0B0B0", // Gray for subtle text (like hints or disabled text)
+  radialGradient: "radial-gradient(ellipse at top, #1C2C26 30%, #2F4138 60%, #3E554B 100%)"
 
-    hoverBg: "#eaeaea",
-    border: "#ddd",
-    lightGray: "#f5f5f5",
-    darkGray: "#333",
-  },
+
+
+,
+ // Dark gradient for background depth
+  stars: "#D9E4DD", // Light, muted greenish white for stars, creating a soft sparkle effect
+};
+export const styles = {
   fonts: {
     heading: "'Spicy Rice', serif",
     main: "'Helvetica Neue', sans-serif",

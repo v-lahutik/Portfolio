@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionContainer, SectionHeader } from '../../GlobalStyles/elements.js';
+import { HeaderIcon, HeaderWrapper, SectionContainer, SectionHeader } from '../../GlobalStyles/elements.js';
 import { SkillsContainer, StyledLogo, LogoWrapper, SkillName} from "./SkillsStyles.js";
 import react from "../../assets/technologyLogos/react.png";
 import javascript from "../../assets/technologyLogos/javascript.png";
@@ -16,8 +16,12 @@ import materialui from "../../assets/technologyLogos/material-ui.png";
 import postman from "../../assets/technologyLogos/postman.png";
 import git from "../../assets/technologyLogos/git.png";
 import github from "../../assets/technologyLogos/github.png";
+import toolkit from "../../assets/headingIcons/toolkit.png";
+import toolkitMint from "../../assets/headingIcons/toolkit-mint.png";
+import { useTheme } from "../../context/ThemeContext";
 
 function Skills() {
+  const { isDarkTheme } = useTheme();
   const skillsData = [
     { name: "HTML", logo: html },
     { name: "CSS", logo: css },
@@ -38,7 +42,10 @@ function Skills() {
   
   return (
     <SectionContainer>
-      <SectionHeader>My Toolkit</SectionHeader>
+      <HeaderWrapper>
+        <SectionHeader className='gloock-regular'>My Toolkit</SectionHeader>
+        <HeaderIcon src={isDarkTheme? toolkitMint: toolkit} alt="toolkit" />
+        </HeaderWrapper>      
       <SkillsContainer>
         
           {skillsData.map((skill, index) => (

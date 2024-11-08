@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../GlobalStyles/themes";
+import { styles } from "../../GlobalStyles/themes";
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -7,6 +7,7 @@ export const HeaderContainer = styled.header`
   position: fixed;
   z-index: 100;
   margin-top: 0.8rem;
+  ${styles.alignment.flexCenter};
 `;
 
 export const Nav = styled.nav`
@@ -14,8 +15,8 @@ export const Nav = styled.nav`
   background-color: transparent;
   width: 25vw; 
   transition: background-color 0.3s ease; 
-  ${theme.alignment.flexCenter};
-  margin: 0 auto; 
+  ${styles.alignment.flexCenter};
+  
   border-radius: 50px;
 
   /* Glass effect when scrolling */
@@ -26,6 +27,24 @@ export const Nav = styled.nav`
     backdrop-filter: blur(10px); /* Blurs the content behind the Nav */
     border-bottom: 1px solid rgba(255, 255, 255, 0.8); 
   `}
+  /* Dynamically adjust width */
+  @media (max-width: 1400px) {
+    width: 50vw; 
+    margin: 0 1rem;
+    padding: 1rem 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 80vw; 
+    margin: 0 1rem;
+    padding: 1rem 0;
+  }
+
+  @media (max-width: 480px) {
+    width: 100vw; 
+    margin: 0 1rem;
+    padding: 1rem 0;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -33,17 +52,21 @@ export const NavList = styled.ul`
   justify-content: space-between;
   gap: 2rem;
   list-style: none;
+  
 `;
 
 export const NavItem = styled.li`
   margin-right: 1rem;
+  padding: 0.5rem 0.2rem;
 
   &:hover {
-    font-weight: 700
+    background-color: ${({ theme }) => theme.primaryBg};
+    border-radius: 15px;
   }
 `;
 
 export const NavLink = styled.a`
-  color: ${theme.colors.primaryText};
+  color: ${({ theme }) => theme.secondaryText};
   text-decoration: none;
+  font-weight: 200;
 `;
