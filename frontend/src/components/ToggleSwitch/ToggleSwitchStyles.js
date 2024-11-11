@@ -16,7 +16,7 @@ export const SwitchContainer = styled.div`
 export const Toggle = styled.div`
   position: absolute;
   top: 2px;
-  left: ${({ isDarkTheme }) => (isDarkTheme ? '26px' : '2px')};
+   left: ${({ isDarkTheme }) => (isDarkTheme ? '26px' : '2px')};
   width: 21px;
   height: 21px;
   border-radius: 50%;

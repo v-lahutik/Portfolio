@@ -19,10 +19,9 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
  
-  
-  @media (max-width: 768px) {
-    width: 80vw; /* Text container takes more width on smaller screens */
-    text-align: center; /* Center text on smaller screens */
+  @media (max-width: 1200px) {
+    width: 80vw; 
+    text-align: center; 
   }
 `;
 
@@ -35,10 +34,10 @@ export const AboutText = styled.p`
   font-family: "Arial", sans-serif;
 
   @media (max-width: 768px) {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1rem; 
   }
 `;
-export const SocialsLink = styled.a`
+export const SocialsLink = styled.div`
   text-decoration: none;
   margin-top: 8px;
   display: flex;
@@ -57,6 +56,17 @@ export const ProfileImageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 5rem;
+
+  @media (max-width: 768px) {
+    width: 20rem; /* Reduce size of the image on tablet */
+    height: 20rem;
+    margin-left: 0; /* Remove margin on small screens */
+  }
+
+  @media (max-width: 480px) {
+    width: 15rem; /* Further reduce size on mobile */
+    height: 15rem;
+  }
 `;
 
 export const Sparkles = styled.div`

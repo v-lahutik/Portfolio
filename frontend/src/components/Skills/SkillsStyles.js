@@ -7,6 +7,7 @@ export const SkillsContainer = styled.div`
   height: auto;
   color: ${({ theme }) => theme.primaryText};
   padding: ${styles.spacing.medium};
+  margin-bottom: ${styles.spacing.large};
   display: flex;
   gap: ${styles.spacing.small};
   flex-wrap: wrap;

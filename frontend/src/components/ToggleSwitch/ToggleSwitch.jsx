@@ -7,10 +7,9 @@ const ToggleSwitch = () => {
   const { toggleTheme, isDarkTheme } = useTheme();
 
   return (
-        <SwitchContainer onClick={toggleTheme}>
-      <Toggle isDarkTheme={isDarkTheme} />
+    <SwitchContainer onClick={toggleTheme}>
+      <Toggle $isDarkTheme={isDarkTheme} /> 
     </SwitchContainer>
-    
   );
 };
 

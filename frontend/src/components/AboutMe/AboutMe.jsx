@@ -39,8 +39,6 @@ const AboutMe = () => {
               <SectionHeader className='gloock-regular'>About Me</SectionHeader>
               <HeaderIcon src={isDarkTheme? aboutMint: about} alt="search icon" />
           </HeaderWrapper>
-        
-          
           <AboutText>
             Hello again! Thanks for taking the time to get to know me a little
             better! 🤗 I’m a passionate web developer, recently graduated from

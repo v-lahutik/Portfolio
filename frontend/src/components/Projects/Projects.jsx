@@ -18,10 +18,14 @@ import {
 import FitZone from "../../assets/projectScreenshots/FitZone2.png";
 import CashFlowControl from "../../assets/projectScreenshots/CashFlowControl3.png";
 import BullsAndCows from "../../assets/projectScreenshots/BullsAndCows2.png";
+import Spotify from "../../assets/projectScreenshots/Spotify.png";
 import laptop from "../../assets/headingIcons/laptop.png";
+import laptopMint from "../../assets/headingIcons/laptop-mint.png";
+import { useTheme } from "../../context/ThemeContext";
 
 const Projects = () => {
-  // Example projects data
+  const { isDarkTheme } = useTheme();
+  
   const project = [
     {
       title: "Fit-Zone Gym & E-Shop Platform",
@@ -61,7 +65,7 @@ const Projects = () => {
       description:
         "Spotify web interface clone developed in collaboration with a fellow student, leveraging the official Spotify API. Key features: user authentication, personalized playlists, and an interactive player component.",
       github: "https://github.com/v-lahutik/Spotify-Frontend",
-      image: FitZone,
+      image: Spotify,
       skills: ["React", "Styled Components", "Spotify API"],
     },
   ];
@@ -70,12 +74,12 @@ const Projects = () => {
     <SectionContainer>
       <HeaderWrapper>
         <SectionHeader className='gloock-regular'>My Projects</SectionHeader>
-    <HeaderIcon src={laptop} alt="laptop icon" />
+    <HeaderIcon src={isDarkTheme? laptopMint : laptop} alt="laptop icon" />
       </HeaderWrapper>
   
       <ProjectsContainer>
         {project.map((project, index) => (
-          <ProjectCard key={index} reverse={index % 2 === 1}>
+          <ProjectCard key={index}  $reverse={index % 2 === 1}>
             {" "}
             {/* Pass reverse prop to alternate layout */}
             <ProjectImage>
@@ -99,7 +103,7 @@ const Projects = () => {
                     Live demo
                   </ProjectButton>
                 )}
-                {project.live && <span> | </span>}
+                {project.live && <span style={{ color: isDarkTheme ? '#A8D5BA' : '#333' }}> | </span>}
                 {/* Only show the pipe if 'Live demo' button is present */}
                 <ProjectButton
                   href={project.github}

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
   width: 100%;
@@ -13,26 +13,21 @@ export const ProjectsContainer = styled.div`
 export const ProjectCard = styled.div`
   width: 70vw;
   position: relative;
- 
   margin: 20px;
-border-bottom: 2px solid  ${({ theme }) => theme.primaryText};
+  border-bottom: 2px solid ${({ theme }) => theme.primaryText};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   transition: transform 0.2s;
   flex-wrap: wrap;
-  
 
   /* Reverse layout if 'reverse' prop is true */
-  flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+  flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
 
   @media (max-width: 1048px) {
     width: 90vw; /* Adjust for smaller screens */
     flex-direction: column; /* Stack the elements vertically */
-   
     align-items: center;
-   
-    
   }
 `;
 
@@ -60,21 +55,22 @@ export const ProjectInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-    p{
-      font-size: 1.2em;
-      color: ${({ theme }) => theme.tertiaryText};
-     
-    }
-    @media (max-width: 1048px) {
-      width: 100%; /* Make the project info take full width */
-      marin: 20px;
-    
-    }
-     @media (max-width: 1048px) {
-      width: 100%; /* Make the project info take full width */
-      padding: 0 20px ; /* Adjust padding */
-      gap: 20px;
-    }
+  p {
+    font-size: 1.2em;
+    color: ${({ theme }) => theme.tertiaryText};
+  }
+  span {
+    font-weight: bold;
+  }
+  @media (max-width: 1048px) {
+    width: 100%; /* Make the project info take full width */
+    marin: 20px;
+  }
+  @media (max-width: 1048px) {
+    width: 100%; /* Make the project info take full width */
+    padding: 0 20px; /* Adjust padding */
+    gap: 20px;
+  }
 `;
 
 export const ProjectTitle = styled.h3`
@@ -83,7 +79,7 @@ export const ProjectTitle = styled.h3`
   color: ${({ theme }) => theme.primaryText};
   margin-top: 3rem;
   @media (max-width: 768px) {
-    margin-top: 0; 
+    margin-top: 0;
   }
 `;
 
@@ -108,7 +104,7 @@ export const SkillsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  `;
+`;
 
 export const Skills = styled.div`
   display: flex;

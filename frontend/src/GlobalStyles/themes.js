@@ -12,7 +12,6 @@ export const lightTheme = {
   tertiaryText: "#gray", // gray
   //radialGradient: "radial-gradient(circle, #EDE7DE 20%, #CCEDB5 50%, #E0E5B7 80%)",
  radialGradient: "radial-gradient(circle, #EDE7DE 40%, #CCEDB5 60%, #E0E5B7 100%)",
-
   stars: "white", // White stars for the sparkle effect
 };
 export const darkTheme = {
@@ -21,12 +20,7 @@ export const darkTheme = {
   primaryText: "#A8D5BA", // Soft mint green for text to maintain consistency with the light theme
   secondaryText: "#4B9984", // Light green for secondary text
   tertiaryText: "#B0B0B0", // Gray for subtle text (like hints or disabled text)
-  radialGradient: "radial-gradient(ellipse at top, #1C2C26 30%, #2F4138 60%, #3E554B 100%)"
-
-
-
-,
- // Dark gradient for background depth
+  radialGradient: "radial-gradient(ellipse at top, #1C2C26 30%, #2F4138 60%, #3E554B 100%)",
   stars: "#D9E4DD", // Light, muted greenish white for stars, creating a soft sparkle effect
 };
 export const styles = {

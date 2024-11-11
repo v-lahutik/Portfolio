@@ -28,10 +28,18 @@ export const Label = styled.label`
 export const Input = styled.input`
   margin: 8px 0;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid ${({ theme }) => theme.secondaryBg};
   border-radius: 5px;
   background-color: ${({ theme }) => theme.secondaryBg};
-`;
+  color: ${({ theme }) => theme.tertiaryText};
+
+  /* Apply styles when the input is focused */
+  &:focus {
+    border-color: ${({ theme }) => theme.primaryText}; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    background-color: ${({ theme }) => theme.primaryBg}; /* Optionally, change background */
+  }
+  `;
 
 export const TextArea = styled.textarea`
   margin: 10px 0;
