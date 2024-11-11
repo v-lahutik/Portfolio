@@ -1,5 +1,3 @@
-// src/components/ContactForm.js
-import React, { useState } from 'react';
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
@@ -35,9 +33,9 @@ export const Input = styled.input`
 
   /* Apply styles when the input is focused */
   &:focus {
-    border-color: ${({ theme }) => theme.primaryText}; /* Change border color on focus */
+    border-color: ${({ theme }) => theme.primaryText}; 
     outline: none; /* Remove default outline */
-    background-color: ${({ theme }) => theme.primaryBg}; /* Optionally, change background */
+    background-color: ${({ theme }) => theme.primaryBg}; 
   }
   `;
 
@@ -47,6 +45,7 @@ export const TextArea = styled.textarea`
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: ${({ theme }) => theme.secondaryBg};
+  color: ${({ theme }) => theme.tertiaryText};
 `;
 
 export const Button = styled.button`

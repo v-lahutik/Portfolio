@@ -1,7 +1,16 @@
-import { HeaderContainer, Nav, NavList, NavItem, NavLink, BurgerIcon, MobileNav } from './HeaderStyles';
-import React, { useEffect, useState} from 'react';
-import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
+import {
+  HeaderContainer,
+  Nav,
+  NavList,
+  NavItem,
+  NavLink,
+  BurgerIcon,
+  MobileNav,
+} from "./HeaderStyles";
+import React, { useEffect, useState } from "react";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { GrMenu } from "react-icons/gr";
+
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // State for toggling mobile menu
@@ -15,8 +24,8 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
@@ -30,16 +39,24 @@ const Header = () => {
       <Nav {...(scrolling ? { scrolling: "true" } : {})}>
         <MobileNav open={isOpen}>
           <NavItem>
-            <NavLink href="#hero" onClick={() => setIsOpen(false)}>Home</NavLink>
+            <NavLink href="#hero" onClick={() => setIsOpen(false)}>
+              Home
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#aboutMe" onClick={() => setIsOpen(false)}>About Me</NavLink>
+            <NavLink href="#aboutMe" onClick={() => setIsOpen(false)}>
+              About Me
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#projects" onClick={() => setIsOpen(false)}>Projects</NavLink>
+            <NavLink href="#projects" onClick={() => setIsOpen(false)}>
+              Projects
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+            <NavLink href="#contact" onClick={() => setIsOpen(false)}>
+              Contact
+            </NavLink>
           </NavItem>
         </MobileNav>
       </Nav>

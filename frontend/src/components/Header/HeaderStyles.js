@@ -9,14 +9,14 @@ export const HeaderContainer = styled.header`
   margin-top: 0.8rem;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Pushes elements to the sides */
+  justify-content: space-between; 
   ${styles.alignment.flexCenter};
 `;
 
 export const Nav = styled.nav`
-  padding: 1rem 2rem;
+  padding: 1rem;
   background-color: transparent;
-  width: 25vw;
+  width: 30vw;
   transition: background-color 0.3s ease;
   ${styles.alignment.flexCenter};
 
@@ -32,7 +32,7 @@ export const Nav = styled.nav`
   `}
   
   /* Dynamically adjust width */
-  @media (max-width: 1400px) {
+  @media (max-width: 1465px) {
     width: 50vw;
     margin: 0 1rem;
     padding: 1rem 0;
@@ -71,7 +71,7 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   margin-right: 1rem;
   padding: 0.5rem 0.2rem;
-
+  
   &:hover {
     background-color: ${({ theme }) => theme.primaryBg};
     border-radius: 15px;
@@ -82,23 +82,23 @@ export const NavLink = styled.a`
   color: ${({ theme }) => theme.secondaryText};
   text-decoration: none;
   font-weight: 200;
-
+  
   &:hover {
     color: ${({ theme }) => theme.primaryText};
   }
 `;
-
-// Styled component for the burger icon
+// Mobile view styling below
 export const BurgerIcon = styled.div`
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: ${({ theme }) => theme.primaryText};
+  margin: 0 1rem;
   @media (max-width: 768px) {
     display: block; /* Show only on smaller screens */
   }
 `;
 
-// Styled component for mobile menu
 export const MobileNav = styled(NavList)`
   display: ${({ open }) => (open ? "flex" : "none")};
   flex-direction: column;

@@ -25,7 +25,7 @@ import { useTheme } from "../../context/ThemeContext";
 
 const Projects = () => {
   const { isDarkTheme } = useTheme();
-  
+
   const project = [
     {
       title: "Fit-Zone Gym & E-Shop Platform",
@@ -73,13 +73,13 @@ const Projects = () => {
   return (
     <SectionContainer>
       <HeaderWrapper>
-        <SectionHeader className='gloock-regular'>My Projects</SectionHeader>
-    <HeaderIcon src={isDarkTheme? laptopMint : laptop} alt="laptop icon" />
+        <SectionHeader className="gloock-regular">My Projects</SectionHeader>
+        <HeaderIcon src={isDarkTheme ? laptopMint : laptop} alt="laptop icon" />
       </HeaderWrapper>
-  
+
       <ProjectsContainer>
         {project.map((project, index) => (
-          <ProjectCard key={index}  $reverse={index % 2 === 1}>
+          <ProjectCard key={index} $reverse={index % 2 === 1}>
             {" "}
             {/* Pass reverse prop to alternate layout */}
             <ProjectImage>
@@ -103,7 +103,12 @@ const Projects = () => {
                     Live demo
                   </ProjectButton>
                 )}
-                {project.live && <span style={{ color: isDarkTheme ? '#A8D5BA' : '#333' }}> | </span>}
+                {project.live && (
+                  <span style={{ color: isDarkTheme ? "#A8D5BA" : "#333" }}>
+                    {" "}
+                    |{" "}
+                  </span>
+                )}
                 {/* Only show the pipe if 'Live demo' button is present */}
                 <ProjectButton
                   href={project.github}

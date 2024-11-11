@@ -20,7 +20,7 @@ export const SectionHeader = styled.h2`
   font-size: 2rem;
   margin-bottom: ${styles.spacing.xl};
   padding-top: ${styles.spacing.medium};
-  position: relative; /* For positioning the pseudo-element */
+  position: relative; 
 `;
 
 export const HeaderWrapper = styled.div`

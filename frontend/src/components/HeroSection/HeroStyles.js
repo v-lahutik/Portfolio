@@ -1,5 +1,4 @@
-import styled, {keyframes} from 'styled-components';
-
+import styled, { keyframes } from "styled-components";
 
 const sparkle = keyframes`
   0%, 100% {
@@ -11,7 +10,6 @@ const sparkle = keyframes`
   }
 `;
 
-
 export const HeroContainer = styled.section`
   height: 100vh;
   display: flex;
@@ -21,10 +19,10 @@ export const HeroContainer = styled.section`
   position: relative;
   text-align: center;
   overflow: hidden; /* Prevent content from going out of bounds */
-  
+
   /* Create the starry effect using a ::before pseudo-element */
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -44,10 +42,10 @@ export const HeroContainer = styled.section`
     background: ${({ theme }) => theme.stars};
     clip-path: polygon(
       50% 0,
-      calc(50% * (1 + sin(.4turn))) calc(50% * (1 - cos(.4turn))),
-      calc(50% * (1 - sin(.2turn))) calc(50% * (1 - cos(.2turn))),
-      calc(50% * (1 + sin(.2turn))) calc(50% * (1 - cos(.2turn))),
-      calc(50% * (1 - sin(.4turn))) calc(50% * (1 - cos(.4turn)))
+      calc(50% * (1 + sin(0.4turn))) calc(50% * (1 - cos(0.4turn))),
+      calc(50% * (1 - sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+      calc(50% * (1 + sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+      calc(50% * (1 - sin(0.4turn))) calc(50% * (1 - cos(0.4turn)))
     );
     opacity: 0;
     animation: ${sparkle} 5s linear infinite;
@@ -75,11 +73,11 @@ export const ContentWrapper = styled.div`
 
   @media (min-width: 768px) and (max-width: 1024px) {
     gap: 15px;
-    max-width: 50%; /* Adjust width for medium screens */
+    max-width: 50%;
   }
 
   @media (max-width: 768px) {
-    max-width: 80%; /* Allow more space on mobile */
+    max-width: 80%;
     gap: 10px;
   }
 `;
@@ -90,9 +88,9 @@ export const Tagline = styled.p`
   margin-top: 10px;
   line-height: 1.6;
   max-width: 800px;
-  
+
   @media (max-width: 768px) {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1rem;
     max-width: 100%;
   }
 `;
@@ -153,7 +151,7 @@ export const CVButton = styled.a`
   }
 
   @media (max-width: 768px) {
-    width: 160px; /* Adjust button width on small screens */
+    width: 160px; 
     padding: 15px 30px;
   }
 `;
@@ -172,6 +170,6 @@ export const ArrowIcon = styled.a`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.5rem; /* Smaller arrow icon on mobile */
+    font-size: 1.5rem;
   }
 `;

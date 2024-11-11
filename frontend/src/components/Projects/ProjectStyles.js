@@ -25,8 +25,8 @@ export const ProjectCard = styled.div`
   flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
 
   @media (max-width: 1048px) {
-    width: 90vw; /* Adjust for smaller screens */
-    flex-direction: column; /* Stack the elements vertically */
+    width: 90vw;
+    flex-direction: column;
     align-items: center;
   }
 `;
@@ -43,8 +43,8 @@ export const ProjectImage = styled.div`
     border-radius: inherit;
   }
   @media (max-width: 1048px) {
-    width: 100%; /* Make the image take full width on smaller screens */
-    height: auto; /* Allow the image to scale with the content */
+    width: 100%;
+    height: auto;
   }
 `;
 
@@ -63,12 +63,12 @@ export const ProjectInfo = styled.div`
     font-weight: bold;
   }
   @media (max-width: 1048px) {
-    width: 100%; /* Make the project info take full width */
+    width: 100%;
     marin: 20px;
   }
   @media (max-width: 1048px) {
-    width: 100%; /* Make the project info take full width */
-    padding: 0 20px; /* Adjust padding */
+    width: 100%;
+    padding: 0 20px;
     gap: 20px;
   }
 `;
@@ -113,4 +113,10 @@ export const Skills = styled.div`
   color: ${({ theme }) => theme.tertiaryText};
   border: 2px solid ${({ theme }) => theme.primaryText};
   border-radius: 50px;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.primaryText};
+    color: ${({ theme }) => theme.secondaryText};
+    transform: scale(1.1);
+  }
 `;

@@ -35,13 +35,16 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch(
+      `${import.meta.env.VITE_BACKEND_URL}/contact`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
 
     if (response.ok) {
       setIsSubmitted(true);
@@ -52,10 +55,12 @@ const ContactForm = () => {
   return (
     <SectionContainer>
       <HeaderWrapper>
-        <SectionHeader className='gloock-regular'>Contact Me</SectionHeader>
-       
-        <HeaderIcon src={isDarkTheme ? contactMint : contact} alt="contact icon" />
+        <SectionHeader className="gloock-regular">Let’s Connect!</SectionHeader>
 
+        <HeaderIcon
+          src={isDarkTheme ? contactMint : contact}
+          alt="contact icon"
+        />
       </HeaderWrapper>
 
       <FormContainer>
@@ -72,7 +77,6 @@ const ContactForm = () => {
           <Input
             type="email"
             name="email"
-
             value={formData.email}
             onChange={handleChange}
             required

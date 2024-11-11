@@ -12,16 +12,13 @@ export const SkillsContainer = styled.div`
   gap: ${styles.spacing.small};
   flex-wrap: wrap;
   justify-content: center;
- 
-  @media (max-width: 768px) {
-    width: 100%; 
-    padding: 0;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
   }
-  
 `;
 
-// Styled component for the logo image
 export const LogoWrapper = styled.div`
   width: 200px;
   height: 80px;
@@ -32,6 +29,8 @@ export const LogoWrapper = styled.div`
   padding: 0 10px;
   &:hover {
     transform: scale(1.05);
+    transition: transform 0.2s ease;
+    background-color: ${({ theme }) => theme.primaryText};
   }
 `;
 
@@ -41,13 +40,16 @@ export const StyledLogo = styled.img`
   padding: ${styles.spacing.small};
 `;
 
-// Styled component for the skill name
 export const SkillName = styled.p`
-  color: ${({ theme }) => theme.primaryText};
+  color: ${({ theme }) => theme.secondaryText};
   margin: 0;
   text-align: center;
   max-width: 80px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  &:hover {
+    color: ${({ theme }) => theme.secondaryText};
+  }
 `;

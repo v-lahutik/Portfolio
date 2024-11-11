@@ -13,21 +13,21 @@ import { SectionContainer } from "../../GlobalStyles/elements";
 
 function Hero() {
   useEffect(() => {
-    const starrySky = document.querySelector('.hero-container');
-    const numberOfShapes = 100;  // Adjust this number to control density
+    const starrySky = document.querySelector(".hero-container");
+    const numberOfShapes = 100; // Adjust this number to control density
 
     for (let i = 0; i < numberOfShapes; i++) {
       // Randomly decide whether to create a circular star or a polygonal star
-      const isPolygonalStar = Math.random() > 0.5;  // 50% chance for each shape
-      const shape = document.createElement('div');
-      shape.classList.add(isPolygonalStar ? 'star' : 'circle-star');
+      const isPolygonalStar = Math.random() > 0.5; // 50% chance for each shape
+      const shape = document.createElement("div");
+      shape.classList.add(isPolygonalStar ? "star" : "circle-star");
 
       // Randomize position, size, and animation duration
       const randomSize = Math.random() * 2 + 1;
       const randomDuration = Math.random() * 3 + 2;
 
-      shape.style.left = Math.random() * 100 + 'vw';
-      shape.style.top = Math.random() * 100 + 'vh';
+      shape.style.left = Math.random() * 100 + "vw";
+      shape.style.top = Math.random() * 100 + "vh";
 
       // Apply size based on shape type
       if (isPolygonalStar) {
@@ -46,10 +46,9 @@ function Hero() {
   }, []);
 
   return (
-   
-      <HeroContainer className="hero-container">
-        <ContentWrapper className="content">
-          <WelcomeMessage />
+    <HeroContainer className="hero-container">
+      <ContentWrapper className="content">
+        <WelcomeMessage />
         <Tagline>
           Transforming ideas into beautiful, functional websites is my passion.
           I focus on delivering high-quality, impactful web applications that
@@ -62,16 +61,12 @@ function Hero() {
         >
           View My CV
         </CVButton>
-         </ContentWrapper>
-        
-     
-        <ArrowIcon href="#aboutMe">
-          <IoIosArrowDown />
-          </ArrowIcon>
-         
-      </HeroContainer>
-     
-      
+      </ContentWrapper>
+
+      <ArrowIcon href="#aboutMe">
+        <IoIosArrowDown />
+      </ArrowIcon>
+    </HeroContainer>
   );
 }
 

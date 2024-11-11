@@ -7,7 +7,6 @@ import {
   SocialsLink,
   ProfileImageWrapper,
   Sparkles,
-  
 } from "./AboutMeStyles";
 import {
   HeaderIcon,
@@ -17,8 +16,8 @@ import {
 } from "../../GlobalStyles/elements.js";
 import Skills from "../Skills/Skills";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import about from '../../assets/headingIcons/about.png';
-import aboutMint from '../../assets/headingIcons/about-mint.png';
+import about from "../../assets/headingIcons/about.png";
+import aboutMint from "../../assets/headingIcons/about-mint.png";
 import { useTheme } from "../../context/ThemeContext";
 
 const AboutMe = () => {
@@ -26,18 +25,26 @@ const AboutMe = () => {
   return (
     <SectionContainer>
       <AboutContainer>
-      <ProfileImageWrapper>
-      <ProfileImage src="profile.jpg" alt="Profile" />
-      <Sparkles>
-        <div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div>
-      </Sparkles>
-    </ProfileImageWrapper>
+        <ProfileImageWrapper>
+          <ProfileImage src="profile.jpg" alt="Profile" />
+          <Sparkles>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </Sparkles>
+        </ProfileImageWrapper>
         <TextContainer>
           <HeaderWrapper>
-
-              <SectionHeader className='gloock-regular'>About Me</SectionHeader>
-              <HeaderIcon src={isDarkTheme? aboutMint: about} alt="search icon" />
+            <SectionHeader className="gloock-regular">About Me</SectionHeader>
+            <HeaderIcon
+              src={isDarkTheme ? aboutMint : about}
+              alt="search icon"
+            />
           </HeaderWrapper>
           <AboutText>
             Hello again! Thanks for taking the time to get to know me a little
@@ -62,19 +69,19 @@ const AboutMe = () => {
           <AboutText>
             Feel free to reach out if you're interested in working together or
             want to chat about web development!
-          </AboutText><SocialsLink>
-          <a href="https://github.com/v-lahutik" target="_blank">
-            <FaGithub className="contact-icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/viktorija-lahutik/"
-            target="_blank"
-          >
-            <FaLinkedin className="contact-icon" />
-          </a>
-        </SocialsLink>
+          </AboutText>
+          <SocialsLink>
+            <a href="https://github.com/v-lahutik" target="_blank">
+              <FaGithub className="contact-icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/viktorija-lahutik/"
+              target="_blank"
+            >
+              <FaLinkedin className="contact-icon" />
+            </a>
+          </SocialsLink>
         </TextContainer>
-        
       </AboutContainer>
       <Skills />
     </SectionContainer>
