@@ -37,6 +37,12 @@ export const Input = styled.input`
     outline: none; /* Remove default outline */
     background-color: ${({ theme }) => theme.primaryBg}; 
   }
+
+  /* Style when input is autofilled by the browser */
+  &:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px ${({ theme }) => theme.secondaryBg} inset !important;
+    -webkit-text-fill-color: ${({ theme }) => theme.tertiaryText} !important;
+  }
   `;
 
 export const TextArea = styled.textarea`
