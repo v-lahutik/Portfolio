@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This site showcases my projects, skill
 
 ## 🚀 Live Demo
 
-Live version coming soon...
+[Click here](https://viktorija-lahutik.onrender.com/)
 
 
 ## 🛠️ Technologies Used
