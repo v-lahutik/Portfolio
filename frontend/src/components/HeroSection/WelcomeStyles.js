@@ -15,6 +15,9 @@ export const Header1 = styled.h1`
   line-height: 1.2;
   margin: 0;
   white-space: nowrap;
+  @media (max-width: 768px) {
+    font-size: clamp(1rem, 3vw, 3rem);
+  }
 `;
 
 export const Header2 = styled.h2`
@@ -22,4 +25,7 @@ export const Header2 = styled.h2`
   opacity: 0;
   font-size: clamp(1.5rem, 4vw, 4rem);
   white-space: nowrap;
+  @media (max-width: 768px) {
+    font-size: clamp(1.2rem, 3vw, 3rem);
+  }
 `;

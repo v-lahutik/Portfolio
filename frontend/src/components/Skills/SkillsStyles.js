@@ -32,12 +32,22 @@ export const LogoWrapper = styled.div`
     transition: transform 0.2s ease;
     background-color: ${({ theme }) => theme.primaryText};
   }
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 40px;
+    justify-content: center;
+    
+  }
+  
 `;
 
 export const StyledLogo = styled.img`
   width: 80px;
   border-radius: 8px;
   padding: ${styles.spacing.small};
+  @media (max-width: 768px) {
+    width: 40px;
+  }
 `;
 
 export const SkillName = styled.p`
@@ -51,5 +61,8 @@ export const SkillName = styled.p`
 
   &:hover {
     color: ${({ theme }) => theme.secondaryText};
+  }
+  @media (max-width: 768px) {
+  display: none;
   }
 `;

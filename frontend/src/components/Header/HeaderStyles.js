@@ -71,21 +71,16 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   margin-right: 1rem;
   padding: 0.5rem 0.2rem;
-  
-  &:hover {
-    background-color: ${({ theme }) => theme.primaryBg};
-    border-radius: 15px;
-  }
 `;
 
 export const NavLink = styled.a`
   color: ${({ theme }) => theme.secondaryText};
   text-decoration: none;
-  font-weight: 200;
-  
   &:hover {
-    color: ${({ theme }) => theme.primaryText};
+    color: black;
+    border-radius: 15px;
   }
+ 
 `;
 // Mobile view styling below
 export const BurgerIcon = styled.div`
@@ -107,7 +102,7 @@ export const MobileNav = styled(NavList)`
   right: 0;
   margin-right: 1rem;
   background-color: rgba(255, 255, 255, 0.95);
-  width: 30vw;
+  width: 40vw;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -121,5 +116,6 @@ export const MobileNav = styled(NavList)`
     box-shadow: none;
     width: auto;
     padding: 0;
+   
   }
 `;

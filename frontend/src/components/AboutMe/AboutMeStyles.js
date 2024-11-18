@@ -10,6 +10,8 @@ export const AboutContainer = styled.section`
   @media (max-width: 768px) {
     flex-direction: column; /* Stack the image and text on small screens */
     align-items: center;
+    gap: 2rem;
+    padding: 1rem;
   }
 `;
 
@@ -22,6 +24,7 @@ export const TextContainer = styled.div`
   @media (max-width: 1200px) {
     width: 80vw;
     text-align: center;
+    padding: 1rem;
   }
 `;
 
@@ -66,6 +69,10 @@ export const ProfileImageWrapper = styled.div`
   @media (max-width: 480px) {
     width: 15rem;
     height: 15rem;
+  }
+  @media (max-width: 320px) {
+    width: 10rem;
+    height: 10rem;
   }
 `;
 
@@ -126,6 +133,18 @@ export const Sparkles = styled.div`
       transform: rotate(360deg);
     }
   }
+  @media (max-width: 768px) {
+    width: 25rem;
+    height: 25rem;
+  }
+  @media (max-width: 414px) {
+    width: 15rem;
+    height: 15rem;
+  }
+  @media (max-width: 320px) {
+    width: 12rem;
+    height: 12rem;
+  }
 `;
 
 export const ProfileImage = styled.img`
@@ -135,4 +154,8 @@ export const ProfileImage = styled.img`
   object-fit: cover;
   border: 4px solid black;
   z-index: 1; /* Ensure the image is above the sparkles */
+  @media (max-width: 768px) {
+    border: 3px solid black;
+  }
+
 `;

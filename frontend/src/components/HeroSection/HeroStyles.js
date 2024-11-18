@@ -79,6 +79,7 @@ export const ContentWrapper = styled.div`
   @media (max-width: 768px) {
     max-width: 80%;
     gap: 10px;
+    
   }
 `;
 
@@ -90,7 +91,7 @@ export const Tagline = styled.p`
   max-width: 800px;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.7rem;
     max-width: 100%;
   }
 `;

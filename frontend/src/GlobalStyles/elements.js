@@ -13,6 +13,9 @@ export const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+ 
+  
 `;
 export const SectionHeader = styled.h2`
   color: ${({ theme }) => theme.primaryText};
@@ -21,6 +24,9 @@ export const SectionHeader = styled.h2`
   margin-bottom: ${styles.spacing.xl};
   padding-top: ${styles.spacing.medium};
   position: relative; 
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const HeaderWrapper = styled.div`
@@ -32,5 +38,8 @@ export const HeaderWrapper = styled.div`
 export const HeaderIcon = styled.img`
   width: 4rem;
   height: 4rem;
-  color: ${({ theme }) => theme.teriaryText};
+  @media (max-width: 768px) {
+    width: 3rem;
+    height: 3rem;
+  }
 `;
